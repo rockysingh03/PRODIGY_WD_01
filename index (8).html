@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUNE ICE-CREAM </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka&family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header id="navbar">
+    <div class="logo"> Pune Ice-cream </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-menu" id="nav-menu">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#checkout">Checkout</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="order-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+        <button class="profile-btn">👤 Profile</button>
+      </div>
+    </div>
+  </header>
+
+
+  <section id="home" class="hero fullpage">
+    <h1>Scoops of Happiness, One Cone at a Time</h1>
+    <p>Discover the most delightful frozen flavors you'll ever taste!</p>
+    <a href="#menu" class="btn">Order Now</a>
+  </section>
+
+  <section id="menu" class="fullpage">
+    <h2>🍧 Explore Our Ice Cream Flavors!</h2>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <section id="why" class="fullpage">
+    <h2>🍦 What Makes Us Sweet?</h2>
+    <div class="why-grid">
+      <div class="why-card">Made with real milk & smiles 🐄</div>
+      <div class="why-card">20+ dreamy flavors to choose from 🎨</div>
+      <div class="why-card">Fast delivery, always frozen 🚚❄️</div>
+    </div>
+  </section>
+
+  <!-- CART -->
+  <section id="cart" class="fullpage">
+    <h2>🛒 Your Cart</h2>
+    <p id="empty-cart-msg" class="empty-cart-text">Your cart is empty 😩</p>
+    <div id="cart-items"></div>
+    <div id="cart-summary"></div>
+  </section>
+
+
+  <section id="checkout" class="fullpage">
+    <h2>💳 Checkout</h2>
+    <div class="checkout-container">
+      <div id="checkout-summary" class="checkout-box"></div>
+      <form id="payment-form" class="checkout-box">
+        <input type="text" placeholder="Cardholder Name" required />
+        <input type="text" placeholder="Card Number" required />
+        <input type="text" placeholder="Expiry MM/YY" required />
+        <input type="text" placeholder="CVV" required />
+        <input type="text" placeholder="Promo Code (optional)" />
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="fullpage">
+    <h2>📞 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send us some sweetness 🍭</button>
+    </form>
+    <div class="socials">
+      <p>✉️ puneicecream.com | 📞 +91-99999-88888</p>
+    </div>
+  </section>
+
+  <canvas id="confetti"></canvas>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+  <script src="script.js"></script>
+
+  <footer class="site-footer">
+    <p>Made by Pune Ice-cream </p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
